@@ -1,16 +1,17 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import ParticlesBg from './ParticlesBg'; // import the new background
+import NeonGrid from './NeonGrid'; // 🌟 Import your new grid background
+import '../styles/HeroEffects.css';
 
 function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden text-white"
     >
-      <ParticlesBg /> {/* Background added here */}
+      <NeonGrid /> {/* ✅ Animated background grid */}
 
-      <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-4 z-10">
+      <h1 className="text-5xl md:text-6xl font-extrabold mb-4 z-10">
         Hi, I'm <span className="text-purple-500">Girijesh</span>
       </h1>
 
@@ -29,23 +30,41 @@ function Hero() {
         repeat={Infinity}
       />
 
-      <div className="mt-6 flex gap-4 flex-wrap justify-center z-10">
-        <a
-          href="#projects"
-          className="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700 transition"
-        >
-          View My Work
-        </a>
-        <a
-          href="/resume.pdf"
-          className="border border-white px-6 py-2 rounded text-white hover:bg-white hover:text-black transition"
-        >
-          Download Resume
-        </a>
+      <div className="mt-10 flex flex-col sm:flex-row gap-6 z-10">
+        {[{ text: 'View My Work', href: '#projects' }, { text: 'Download Resume', href: '/Girijesh_resume.pdf' }].map(
+          (btn, idx) => (
+            <a href={btn.href} key={idx} className="button-container">
+              <button className="hacker-button">
+                {btn.text}
+                <div className="neon-frame"></div>
+                <div className="circuit-traces">
+                  <div className="circuit-trace"></div>
+                  <div className="circuit-trace"></div>
+                  <div className="circuit-trace"></div>
+                  <div className="circuit-trace"></div>
+                  <div className="circuit-trace"></div>
+                </div>
+                <div className="code-fragments">
+                  <span className="code-fragment">0x1A</span>
+                  <span className="code-fragment">1100</span>
+                  <span className="code-fragment">DATA</span>
+                  <span className="code-fragment">CODE</span>
+                  <span className="code-fragment">RUN</span>
+                </div>
+                <div className="interference"></div>
+                <div className="scan-bars">
+                  <div className="scan-bar"></div>
+                  <div className="scan-bar"></div>
+                  <div className="scan-bar"></div>
+                </div>
+                <div className="text-glow"></div>
+              </button>
+            </a>
+          )
+        )}
       </div>
     </section>
   );
 }
 
 export default Hero;
-
