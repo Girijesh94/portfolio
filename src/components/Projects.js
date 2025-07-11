@@ -30,7 +30,7 @@ const projects = [
     description:
       'Python voice assistant capable of executing system commands, fetching info, and responding via speech.',
     tags: ['Python', 'SpeechRecognition', 'Pyttsx3'],
-    image: '/images/assistant.png',
+    image: '/images/assistant.jpg',
   },
 ];
 

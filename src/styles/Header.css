@@ -89,3 +89,42 @@
   box-shadow: #4b0082 0 3px 7px inset;
   transform: translateY(2px);
 }
+/* Default (desktop view) */
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+/* Hamburger icon hidden by default */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #e9d5ff;
+  cursor: pointer;
+  z-index: 101;
+}
+
+/* ✅ Mobile only */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: #0a0115;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    display: none; /* 👈 Only here! */
+    border-top: 1px solid #3a1a61;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
