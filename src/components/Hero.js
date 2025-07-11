@@ -19,9 +19,9 @@ function Hero() {
         sequence={[
           'Full Stack Developer 💻',
           2000,
-          'React Enthusiast ⚛️',
+          'CyberSecurity Specialist 🛡️',
           2000,
-          'Backend Builder 🛠️',
+          'AI/ML Enthusiast 🤖',
           2000,
         ]}
         wrapper="span"

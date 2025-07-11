@@ -15,15 +15,17 @@ function Contact() {
       </h2>
 
       <form
-        action="mailto:your-email@example.com"
-        method="POST"
-        className="contact-form z-10"
-      >
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required />
-        <button type="submit">Send</button>
-      </form>
+  action="https://formsubmit.co/alltimefellow@gmail.com"
+  method="POST"
+  className="contact-form z-10"
+>
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" required />
+  <input type="hidden" name="_captcha" value="false" />
+  <button type="submit">Send</button>
+</form>
+
     </section>
   );
 }
